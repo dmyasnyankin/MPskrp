@@ -21,7 +21,7 @@ const iPhone = devices['iPhone 6'];
     await page.waitForNavigation();
     // give it phone screen view to more easily select manage booking
     await page.emulate(iPhone);
-    await page.waitFor(5000);
+    await page.waitFor(3000);
     console.log('B6 loaded...');
 
     // LIKELY TO CHANGE
@@ -32,17 +32,26 @@ const iPhone = devices['iPhone 6'];
     console.log('Click on Hamburger Icon');
     
     // await page.click('ul[class="navigation-list"]')[2];
-
+    
     
     await page.waitFor(3000);
     
-    // FAILED ATTEMPTS at finding manage booking in hamburger
-    // await page.click('div[class="side-menu-panel"] div[class="side-menu-navigation"] ul[class="navigation-items"] li[class="navigation-item"]')[2];
-    // WORKING ATTEMPT via copying selector path
-    // await page.click('body > header > div.parbase.header > div.cx-header-content.full-header.header-grey-bottom-box-shadow > div > div.side-menu-panel.show-by-opacity > div.side-menu-content > div.side-menu-navigation > ul > li:nth-child(2)');
-    // SHORTENED WORKING ATTEMPT
-    // await page.click('div.side-menu-navigation > ul > li:nth-child(2)');
-    // console.log('Clicked on Manage Tab');
+    await page.click('#jb-expansion-panel-id-14 button');
+    console.log('Click on My Trips');
+    await page.waitFor(3000);
+
+    // await page.mouse.click(100, 400);
+    // await page.mouse.click(10, 10, { button: 'left' });
+    await page.mouse.move(100, 500);
+    await page.mouse.down();
+    await page.mouse.move(200, 200);
+    await page.mouse.up();
+
+    // FAIL
+    // let mngTrip = document.querySelector("#subnav-wrapper_sq00hjbkj-3 > div > ul > div > li:nth-child(1) > jb-bubble-link > a > span > span");
+    // await page.click(mngTrip);
+
+    console.log('Click on Manage My Trips');
 
     // WA 
     // await page.click('body > header > div.parbase.header > div.cx-header-content.full-header.header-grey-bottom-box-shadow > div > div.side-menu-panel.show-by-opacity > div.side-menu-content.show-child-content > div.side-menu-navigation > ul > li:nth-child(2) > div > div > div > div:nth-child(1) > div > div.navigation-header-title-des > div.parsys.contentpar > div:nth-child(2) > a')
