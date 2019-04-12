@@ -46,6 +46,7 @@ const iPhone = devices['iPhone 6'];
     await page.mouse.down();
     await page.mouse.move(200, 200);
     await page.mouse.up();
+    // await page.waitFor(2000);
 
     // FAIL
     // let mngTrip = document.querySelector("#subnav-wrapper_sq00hjbkj-3 > div > ul > div > li:nth-child(1) > jb-bubble-link > a > span > span");
@@ -67,9 +68,11 @@ const iPhone = devices['iPhone 6'];
     // FAILED ATTEMPTS at finding selector above:
 
     // Type in Conf # and PAX name
-    // await page.type('input[id="givenName"]', 'Piska', {delay: 100});
-    // await page.type('input[id="familyName"]', 'Chlen', {delay: 100});
-    // await page.type('#rloc-and-eticket', 'ILXILX', {delay: 100});
+    await page.waitFor(5000);
+    await page.click('#confirmationNumber');
+    await page.type('input[id="confirmationNumber"]', 'ALBUMZ', {delay: 100});
+    await page.type('input[id="familyName"]', 'Chlen', {delay: 100});
+    await page.type('#rloc-and-eticket', 'ILXILX', {delay: 100});
     
     // Click to enter PAX info
     // await page.keyboard.press('Enter');
