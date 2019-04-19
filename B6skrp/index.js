@@ -68,8 +68,8 @@ const iPhone = devices['iPhone 6'];
     console.log('Click on Manage My Trips');
     await page.click('form[id="findFlightForm"]');
     await page.click('#confirmationNumber');
-    await page.type('input[id="confirmationNumber"]', 'ALBUMZ', {delay: 100});
-    // await page.type('input[id="familyName"]', 'Chlen', {delay: 100});
+    await page.type('input[id="confirmationNumber"]', 'ILXILX', {delay: 100});
+    // await page.type('input[id="familyName"]', 'Conrad', {delay: 100});
     // await page.type('#rloc-and-eticket', 'ILXILX', {delay: 100});
     
     // Click to enter PAX info
@@ -81,3 +81,5 @@ const iPhone = devices['iPhone 6'];
     debugger;
     await browser.close();
 })();
+
+

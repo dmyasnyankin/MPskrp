@@ -59,9 +59,9 @@ const puppeteer = require('puppeteer');
     // FAILED ATTEMPTS at finding selector above:
 
     // Type in Conf # and PAX name
-    await page.type('input[id="givenName"]', 'Piska', {delay: 100});
-    await page.type('input[id="familyName"]', 'Chlen', {delay: 100});
-    await page.type('#rloc-and-eticket', 'ILXILX', {delay: 100});
+    await page.type('input[id="givenName"]', 'Chandler', {delay: 100});
+    await page.type('input[id="familyName"]', 'Bing', {delay: 100});
+    await page.type('#rloc-and-eticket', 'FRND2Z', {delay: 100});
     
     // Click to enter PAX info
     // await page.keyboard.press('Enter');

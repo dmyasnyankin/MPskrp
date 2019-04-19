@@ -28,9 +28,9 @@ const puppeteer = require('puppeteer');
         // await page.click('#navPrimary > li:nth-child(4) > a');
 
     // Type in Conf # and PAX name
-    await page.type('input[id="confirmationNo"]', 'B6969B', {delay: 100});
-    await page.type('input[id="firstName"]', 'Joe', {delay: 100});
-    await page.type('input[id="lastName"]', 'Blow', {delay: 100});
+    await page.type('input[id="confirmationNo"]', 'LFTHVY', {delay: 100});
+    await page.type('input[id="firstName"]', 'Arnold', {delay: 100});
+    await page.type('input[id="lastName"]', 'Schwarzenegger', {delay: 100});
     // Click to enter PAX info
     // await page.keyboard.press('Enter');
 
