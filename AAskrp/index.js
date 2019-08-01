@@ -23,14 +23,12 @@ const puppeteer = require('puppeteer');
     console.log('Clicked on View Reservations...');
     await page.waitFor(5000);
 
+    // Type in Conf # and PAX name
     await page.type('form[id="findReservationForm"] input[name="firstName"]', 'Vladimir', {delay: 25});
     await page.type('form[id="findReservationForm"] input[name="lastName"]', 'Putin', {delay: 25});
     await page.type('form[id="findReservationForm"] input[name="recordLocator"]', 'PYCC1R', {delay: 25});
     console.log('Typed in PAX deets...')
-    // Type in Conf # and PAX name
-    // await page.type('input[id="givenName"]', 'Chandler', {delay: 100});
-    // await page.type('input[id="familyName"]', 'Bing', {delay: 100});
-    // await page.type('#rloc-and-eticket', 'FRND2Z', {delay: 100});
+
     debugger
     await browser.close();
 })();
